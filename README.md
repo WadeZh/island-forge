@@ -6,9 +6,10 @@
 
 ## 在线体验
 
+- **线上地址**：https://wadezh.github.io/island-forge/ （GitHub Pages，推送 main 自动部署）
+- **源码仓库**：https://github.com/WadeZh/island-forge
 - 本地开发：`npm install && npm run dev`，浏览器打开 http://localhost:5173
 - 本地预览生产构建：`npm run build && npm run preview`，打开 http://localhost:4173
-- 线上链接：（发布后填写，见下文「发布」一节）
 
 ## 玩法
 
@@ -71,7 +72,7 @@ npm run e2e          # Playwright 浏览器测试（自动启动 preview）
 
 ## 发布
 
-`npm run build` 产出纯静态 `dist/`，可部署到任何静态托管（Vercel / Netlify / GitHub Pages / 对象存储）。`vite.config.ts` 已配置 `base: './'`，支持任意子路径。
+`npm run build` 产物为纯静态 `dist/`。仓库已配置 GitHub Actions 工作流（`.github/workflows/deploy.yml`）：任何推送到 `main` 的提交都会自动构建并发布到 GitHub Pages。`vite.config.ts` 已配置 `base: './'`，同样可部署到任意其他静态托管。
 
 ## 无障碍与适配
 
