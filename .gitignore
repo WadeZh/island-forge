@@ -1,0 +1,8 @@
+node_modules/
+dist/
+e2e/artifacts/
+*.log
+.vite/
+.DS_Store
+Thumbs.db
+.zcode/

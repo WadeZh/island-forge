@@ -1,0 +1,36 @@
+/** 全部取自设计规范色板，派生色按同色系调整 */
+export const C = {
+  seaDeep: '#126B84',
+  seaMid: '#2E97AC',
+  seaLight: '#51BDD3',
+  seaGlow: '#7FD4DF',
+  sand: '#F2D7A1',
+  sandDeep: '#E4BE85',
+  sandWet: '#C9A97B',
+  sandDot: '#B9946A',
+  grass: '#86C98A',
+  grassDark: '#6FAF78',
+  grassLight: '#A5D8A4',
+  grassDeep: '#4E9163',
+  forest: '#377B58',
+  forestDark: '#2F6B4F',
+  forestMid: '#4C9A68',
+  forestLight: '#7CC08F',
+  trunk: '#8B5A3C',
+  wood: '#A87350',
+  woodDark: '#7C4A2D',
+  roof: '#B5573F',
+  roofLight: '#D97B5F',
+  wallCream: '#EFE0BC',
+  stone: '#E8DCC8',
+  stoneDark: '#B9AA8E',
+  rock: '#97A1A6',
+  rockLight: '#BFC8CC',
+  rockDark: '#6E7A80',
+  sunset: '#F7BF75',
+  nightSky: '#142544',
+  foam: 'rgba(255,255,255,0.85)',
+  windowLit: '#FFD98A'
+} as const
+
+export const FLOWER_LEAF = '#4E8F5B'

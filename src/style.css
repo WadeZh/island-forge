@@ -1,0 +1,170 @@
+:root {
+  --sea-deep: #126b84;
+  --sea-light: #51bdd3;
+  --sand: #f2d7a1;
+  --grass: #86c98a;
+  --forest: #377b58;
+  --wood: #a87350;
+  --gold: #f7bf75;
+  --night: #142544;
+  --ink: #10333f;
+  --glass: rgba(255, 255, 255, 0.13);
+  --glass-strong: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.28);
+  --text: #f4fafc;
+  --text-dim: rgba(238, 248, 252, 0.78);
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei',
+    'Noto Sans SC', sans-serif;
+  color: var(--text);
+  background: var(--sea-deep);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  background: none;
+}
+
+/* ---------- 玻璃面板 ---------- */
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  backdrop-filter: blur(16px) saturate(1.25);
+  -webkit-backdrop-filter: blur(16px) saturate(1.25);
+  box-shadow:
+    0 8px 32px rgba(8, 40, 56, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+/* ---------- 按钮 ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    transform 0.16s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    opacity 0.2s;
+  box-shadow: 0 4px 18px rgba(8, 40, 56, 0.3);
+  white-space: nowrap;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.28);
+}
+.btn:active {
+  transform: translateY(0) scale(0.97);
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+.btn-primary {
+  background: linear-gradient(135deg, #ffd79a, var(--gold) 55%, #f2a65e);
+  color: #5d3a12;
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 6px 24px rgba(247, 191, 117, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ffe3b0, #ffca85 55%, #f7b06a);
+}
+.btn-ghost {
+  background: rgba(10, 42, 58, 0.32);
+}
+.btn-ghost:hover {
+  background: rgba(10, 42, 58, 0.5);
+}
+.btn-icon {
+  padding: 11px;
+  border-radius: 14px;
+}
+.btn.active {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.62));
+  color: #14506b;
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border-radius: 14px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+/* ---------- 画布 ---------- */
+.stage-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+/* ---------- 通用弹层 ---------- */
+.overlay-fade-enter-active,
+.overlay-fade-leave-active {
+  transition: opacity 0.28s ease;
+}
+.overlay-fade-enter-from,
+.overlay-fade-leave-to {
+  opacity: 0;
+}
+
+@media (max-width: 720px) {
+  .btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
