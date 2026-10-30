@@ -39,5 +39,5 @@
 
 ## 四、发布
 
-- `npm run build` 产物在 `dist/`，纯静态、`base:'./'`，可直接上传任意静态托管。
-- 线上链接：待发布后回填 `README.md`。
+- **线上体验**：https://wadezh.github.io/island-forge/ （GitHub Pages 自动部署）
+- **源码仓库**：https://github.com/WadeZh/island-forge （推送 main 自动构建发布）
